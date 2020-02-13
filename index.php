@@ -1,3 +1,34 @@
+<?php
+        $result="";
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        if(!$_POST['name']){
+             $error='<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button>Please enter your name</div>';
+        }
+        if(!$_POST['email']){
+            $error.='<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button>Please enter your email</div>';
+        }
+        if(!$_POST['message']){
+            $error.='<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button>Please write something</div>';
+        }
+        if(isset($error)){
+            $result=$error;
+        }
+        else{
+          $headers = "MIME-Version: 1.0" . "\r\n";
+          $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+          $headers .= 'From: <gforgenius3@gmail.com>' . "\r\n";
+          // $headers .= 'Cc: myboss@example.com' . "\r\n";
+            if ( mail("gforgenius2@gmail.com", "Message from website",
+              $_POST['message'], $headers
+            )) {
+                $done="Thank you! We will contact you shortly.";
+                $result='<div class="alert alert-success alert-dismissible">'.$done.'</div>';
+            }
+        }
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,15 +40,17 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/573ea8427a.js"></script>
   </head>
   <body>
-        <div class="first-section" id="first-section">
+        <!-- <div class="first-section" id="first-section">
           <div class="image">
             <img src="images/logo.png" alt="">
           </div>
           <div class="text-section">
-            <!-- <p><span>Verlangen deine Kunden<br>eine Dokumentation wo du<br>ihre Plakate aufgehangt hast </span> </p> -->
             <p><span>Verlangen deine Kunden</span> </p>
             <p><span>eine Dokumentation wo du</span></p>
             <p><span>ihre Plakate aufgehangt hast</span></p>
@@ -27,27 +60,36 @@
 
         </div>
 
-        </div>
+        </div> -->
         <div class="container-fluid h-100 for-tab">
+
           <div class="second-section row" id="second-section">
-            <div class="text-section-second col-md-4 offset-md-2 col-sm-4 offset-sm-2 my-auto">
-              <h1><span> Plakateapp </span>  </h1>
-              <p> Was sie fur dich tut <br> Mit deinem Smartphone <br> deine Projekte, Protokolle <br> und Kundendateien verwalten. </p>
-              <!-- <p> Mit deinem Smartphone </p>
-              <p> deine Projekte, Protokolle </p>
-              <p> und Kundendateien verwalten. </p> -->
-              <h1> Easy! </h1>
+            <div class="col-md-4 col-sm-4 img-part">
+              <div class="image-logo">
+                <img src="images/logo.png" alt="">
+              </div>
+              <div class="diagram-img my-auto">
+                <img src="images/diagram.png" alt="" class="img-responsive" width="100%">
+              </div>
+            </div>
+            <div class="text-section-second col-md-4 col-sm-4 text-center">
+              <div class="text-section-second-part">
+                <p> Mit deinem Smartphone <br> deine Projekte, Protokolle <br> and Kundendateien verwalten </p>
+                <h1> Easy! </h1>
+              </div>
+
               <div class="btn-section">
-              <a href="" class="btn">Probieren Sie es jetz</a>
+              <a href="http://www.alegralabs.com:8995/" class="btn"><img src="images/demo-anim.gif" alt="" width="60%">  </a>
+
 
             </div>
             </div>
-            <div class="image-section col-md-4 offset-md-2 col-sm-4 offset-sm-2" id="img">
+            <div class="image-section col-md-4 col-sm-4 ">
               <img src="images/pasting.jpg" alt="" id="img">
             </div>
           </div>
         </div>
-          <h2 style="color:#555555; margin-left:40px" class="simple-h2" >-so funktioniert's</h2>
+          <h2 style="color:#555555; margin-left:40px" class="simple-h2" >- so funktioniert's</h2>
 
 <div class="container-fluid h-100 third-for-mobile">
   <div class="third-section row " >
@@ -59,7 +101,7 @@
 
         </div>
         <div class="caption-section">
-          <p>Mach ein Foto von jedem Plakat dass du in Auftrag hast.</p>
+          <p>Mach ein Foto von jedem Projekt.</p>
         </div>
       </div>
     </div>
@@ -70,7 +112,7 @@
           <img src="images/worker-handy.png" alt="">
         </div>
         <div class="caption-section">
-          <p>Ihre Mitarbeiter machen ein Foto, um ihre Arbeit zu bestatigen.</p>
+          <p>Dene protokollieren mit Fotos.</p>
         </div>
       </div>
     </div>
@@ -82,9 +124,17 @@
 
         </div>
         <div class="caption-section">
-          <p> Die PosterAPP sortiert dir alle Fotos in Kundenordner und auf Wunsch in weitere Ordner. </p>
+          <p> Die Postrapp sortiert dir alle Fotos in Kundenordner und auf Wunsch in weitere Ordner. </p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="before-fourth-section">
+    <p>Geld von Vater Staat?</p>
+    <div class="loan-btn">
+      <a href="#" class="btn">Ja, ich möchte mehr über die Förderung digitaler Massnahmen erfahren</a>
     </div>
   </div>
 </div>
@@ -101,24 +151,25 @@
         <div class="col-md-12 my-auto">
           <p><i class="fa fa-map-marker" aria-hidden="true"></i></p>
           <p>Address</p>
-          <p>123 Stree New York City,</p>
-          <p>United States of America 750</p>
+          <p>Vordersteig 12</p>
+          <p>76275 Ettlingen, Germany</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="col-md-12 my-auto">
           <p><i class="fa fa-phone" aria-hidden="true"></i></p>
           <p>Phone</p>
-          <p>1234567890</p>
-          <p>1234567890</p>
+          <p>07243-7297157</p>
+          <p>01734-526589</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="col-md-12 my-auto">
           <p><i class="fa fa-envelope" aria-hidden="true"></i></p>
           <p>Email</p>
-          <p>qwerty@gmail.com</p>
-          <p>asdfg@gmail.com</p>
+          <p>hallo@postrapp.de</p>
+          <p> &nbsp;</p>
+          <!-- <p>hallo@postrapp.de</p> -->
         </div>
       </div>
 
@@ -127,7 +178,8 @@
     <div class="contact-form row">
       <div class="col-md-6">
         <div class="col-md-12">
-          <form action="/">
+  <form method="post">
+    <?php echo $result; ?>
     <div class="form-group">
       <input type="name" class="form-control" id="name" placeholder="Name" name="name">
     </div>
@@ -138,7 +190,7 @@
       <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
     </div>
 
-    <button type="submit">Send Message</button>
+    <button type="submit" name="submit">Send Message</button>
   </form>
         </div>
       </div>
@@ -167,7 +219,7 @@
           <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> </li>
         </ul> -->
         <div class="copyright text-center container-fluid" >
-          <p>Copyright © 2020. All rights reserved by You!</p>
+          <p>Copyright © 2020. All rights reserved.</p>
         </div>
   <!-- </div> -->
 <!-- </div> -->
