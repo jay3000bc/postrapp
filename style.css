@@ -251,6 +251,7 @@ font-size: 22px
 .third-for-mobile{
   height: auto !important;
 }
+
 .third-for-mobile .row{
   margin-right:0px !important;
   margin-left: 0px !important
@@ -286,7 +287,7 @@ font-family: 'Archivo Black', sans-serif;
 
 }
 .before-fourth-section{
-  margin-top: 30px;
+  margin-top: 20px;
 border: 2px solid darkgrey;
 /* text-align: justify; */
 padding: 4px 10px;
@@ -929,7 +930,7 @@ form button:hover{
     height: 100vh;
   }
   .text-section-second-part{
-  height: 75vh;
+  height: 96vh;
   margin: 0;
   /* display: flex; */
   align-items: center;
@@ -1004,38 +1005,67 @@ form button:hover{
     margin-right: 0px;
     margin-left: 0px
   }
+
+  .third-section .col-md-4{
+    /* background: #EFEFEF; */
+    height: 65vh
+  }
   .third-section .col-md-4 .col-md-12{
     background: #EFEFEF;
-    height: 100vh
+    height: 65vh
   }
 
   .third-section .col-md-4 .col-md-12 img{
     /* object-fit: cover; */
-    width: 100%;
+    width: 80%;
   }
   .third-section .col-md-4 .col-md-12 span{
     margin-top: 20px;
   }
+
+  .simple-h2-div{
+    /* margin-left: 15px !important; */
+    /* font-size: 70px; */
+    /* margin-top: 30px; */
+    /* display: flex;
+    flex-direction: column;
+    vertical-align: middle; */
+    height: 10vh
+  }
   .simple-h2{
-    margin-left: 15px !important;
-    font-size: 70px;
-    margin-top: 40px
+    font-size: 60px;
   }
   .img-section{
-    height: 60vh !important
+    height: 45vh !important;
+    text-align: center;
   }
+  .caption-section{
+    height: 20vh;
+    margin-top: 20px
+  }
+  #special-case-third-img{
+    height: 35vh !important
+
+  }
+  .third-section .btn-section{
+    height: 10vh;
+    /* padding-top: 35px; */
+    /* height: 25vh */
+  }
+
   .img-section h2{
-    font-size: 48px
+    font-size: 48px;
+    text-align: left;
   }
   .caption-section p{
   color: #555555;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   /* font-weight: 600; */
   font-family: 'Poppins', sans-serif;
   }
   .before-fourth-section{
-    margin-top: 70px;
+    margin-top: 50px;
 border: 2px solid darkgrey;
 /* text-align: justify; */
 padding: 4px 10px;

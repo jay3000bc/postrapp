@@ -36,6 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PostrApp</title>
     <!-- <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
@@ -69,30 +70,34 @@
                 <img src="images/logo.png" alt="">
               </div>
               <div class="diagram-img my-auto">
-                <img src="images/diagram.png" alt="" class="img-responsive" width="100%">
+                <img src="images/cycle.png" alt="" class="img-responsive" width="100%">
               </div>
             </div>
             <div class="text-section-second col-md-4 col-sm-4 text-center">
               <div class="text-section-second-part">
-                <p> Mit deinem Smartphone <br> deine Projekte, Protokolle <br> and Kundendateien verwalten </p>
+                <p> Mit deinem Smartphone <br> deine Projekte, Protokolle <br> und Kundendateien verwalten </p>
                 <h1> Easy! </h1>
               </div>
 
-              <div class="btn-section">
+              <!-- <div class="btn-section">
               <a href="http://www.alegralabs.com:8995/" class="btn"><img src="images/demo-anim.gif" alt="" width="60%">  </a>
 
 
-            </div>
+            </div> -->
             </div>
             <div class="image-section col-md-4 col-sm-4 ">
               <img src="images/pasting.jpg" alt="" id="img">
             </div>
           </div>
         </div>
-          <h2 style="color:#555555; margin-left:40px" class="simple-h2" >- so funktioniert's</h2>
 
 <div class="container-fluid h-100 third-for-mobile">
+
   <div class="third-section row " >
+    <div class="simple-h2-div col-md-12">
+      <h2 style="color:#555555; margin-left:40px" class="simple-h2" >- so funktioniert's..</h2>
+
+    </div>
     <div class="col-md-4 col-sm-4 col-4">
       <div class="col-md-12">
         <div class="img-section">
@@ -112,45 +117,51 @@
           <img src="images/worker-handy.png" alt="">
         </div>
         <div class="caption-section">
-          <p>Dene protokollieren mit Fotos.</p>
+          <!-- <p>Dene protokollieren mit Fotos.</p> -->
+          <p>Deine Mitarbeiter protokollieren.</p>
         </div>
       </div>
     </div>
     <div class="col-md-4 col-sm-4 col-4">
       <div class="col-md-12">
-        <div class="img-section">
+        <div class="img-section" id="special-case-third-img">
           <h2><span class="badge badge-pill badge-danger">3</span></h2>
           <img src="images/folders.png" alt="">
 
         </div>
         <div class="caption-section">
-          <p> Die Postrapp sortiert dir alle Fotos in Kundenordner und auf Wunsch in weitere Ordner. </p>
+          <p> Die PostrAPP sortiert dir alle Fotos in Kundenordner und auf Wunsch in weitere Ordner. </p>
         </div>
       </div>
+    </div>
+      <div class="col-md-12 btn-section text-center">
+      <!-- <a href="http://www.alegralabs.com:8995/" class="btn"><img src="images/demo-anim.gif" alt="" width="60%">  </a> -->
+      <a href="http://www.alegralabs.com:8995/"><img src="images/demo-anim.gif" alt="" width="20%">  </a>
+
     </div>
   </div>
 </div>
 <div class="container">
   <div class="before-fourth-section">
-    <p>Geld von Vater Staat?</p>
+    <p>Willst du Geld von Vater Staat?</p>
     <div class="loan-btn">
-      <a href="#" class="btn">Ja, ich möchte mehr über die Förderung digitaler Massnahmen erfahren</a>
+      <a href="#" class="btn">Ja, ich möchte mehr über die Förderung digitaler Massnahmen erfahren.</a>
     </div>
   </div>
 </div>
   <div class="container">
     <div class="fourth-section">
-    <div class="header text-center row">
+    <!-- <div class="header text-center row">
       <div class="col-md-8 offset-md-2">
         <h1>Get In Touch</h1>
         <p> Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo. </p>
       </div>
-    </div>
+    </div> -->
     <div class="info row">
       <div class="col-md-4">
         <div class="col-md-12 my-auto">
           <p><i class="fa fa-map-marker" aria-hidden="true"></i></p>
-          <p>Address</p>
+          <p>Addresse</p>
           <p>Vordersteig 12</p>
           <p>76275 Ettlingen, Germany</p>
         </div>
@@ -187,10 +198,10 @@
       <input type="email" class="form-control" id="email" placeholder="Email" name="email">
     </div>
     <div class="form-group">
-      <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+      <textarea class="form-control" rows="5" id="message" name="message" placeholder="Nachricht"></textarea>
     </div>
 
-    <button type="submit" name="submit">Send Message</button>
+    <button type="submit" name="submit">Nachricht senden</button>
   </form>
         </div>
       </div>
